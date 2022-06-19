@@ -6,6 +6,8 @@ import { ViviendasComponent } from './viviendas/viviendas.component';
 import { ViviendaComponent } from './viviendas/vivienda/vivienda.component';
 import { ViviendaFormComponent } from './vivienda-form/vivienda-form.component';
 import { ViviendaItemComponent } from './vivienda-item/vivienda-item.component';
+import { FormsModule } from '@angular/forms';
+import { AuxiliarService } from '../service/auxiliar.service';
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { ViviendaItemComponent } from './vivienda-item/vivienda-item.component';
   ],
   imports: [
     CommonModule,
-    ViviendasRoutingModule
-  ]
+    ViviendasRoutingModule,
+    FormsModule,
+  ],
+  exports: [ ViviendaComponent],
+  providers: [AuxiliarService]
 })
 export class ViviendasModule { }
